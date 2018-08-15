@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express();
 const http = require('http').Server(app)
 const io = require('socket.io')(http)
@@ -12,6 +13,8 @@ module.exports = PORT => {
 
     app.use(require("webpack-dev-middleware")(compiler))
     app.use(require("webpack-hot-middleware")(compiler))
+    app.use(bodyParser.json())
+    app.use(express.json())
 
     app.use(express.static("./static"))
 

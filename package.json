@@ -4,11 +4,16 @@
   "description": "simple chat app",
   "main": "index.js",
   "scripts": {
-    "dev": "node server/index.js"
+    "dev": "nodemon server/index.js --ignore static --ignore src"
   },
   "author": "silent",
   "license": "MIT",
   "dependencies": {
+    "babel-core": "6.26.3",
+    "babel-loader": "7.1.5",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "body-parser": "1.18.3",
     "css-loader": "1.0.0",
     "express": "4.16.3",
     "extract-loader": "2.0.1",
@@ -25,11 +30,7 @@
     "style-loader": "0.22.1",
     "stylus": "0.54.5",
     "stylus-loader": "3.0.2",
-    "webpack": "4.16.5",
-    "babel-core": "6.26.3",
-    "babel-loader": "7.1.5",
-    "babel-preset-env": "1.7.0",
-    "babel-preset-react": "6.24.1"
+    "webpack": "4.16.5"
   },
   "devDependencies": {
     "nodemon": "1.18.3",

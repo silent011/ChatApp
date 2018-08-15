@@ -1,6 +1,8 @@
 export const mainUrl = "http://localhost:8000/"
-export const userRoute= "user"
+export const userRoute= "user/"
+export const registerRoute = "register/"
+export const onlineRoute = "online/"
 
 export const DefaultJsonHeader = {
-    "Content-Yype": "application/json"
+    "Content-Type": "application/json"
 }
