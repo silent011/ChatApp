@@ -15,7 +15,7 @@ const registerUser = (req, res) => {
     const newUser = req.body
     const response = Object.assign({error: '', success: true}, newUser)
     response.error = findNewUserErrors(newUser)
-
+    console.log('response', response)
     if(response.error) {
         response.success = false
         return res.send(JSON.stringify(response))
