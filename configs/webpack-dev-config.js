@@ -9,17 +9,19 @@ module.exports = {
     ],
     output:{
         path: path.resolve(__dirname, "../static"),
-        filename: 'app.bundle.js'
+        filename: 'app.bundle.js',
+        publicPath: '/'
     },
     module: {
         rules:[
             {
-                test:/\.(ico)$/,
+                test:/favicon.ico$/,
                 use:[
                     {
                         loader:'file-loader',
                         options: {
-                            name:'favicon.ico'
+                            name:'[name].[ext]'
+                            
                         }
                     }
                 ]
@@ -31,7 +33,7 @@ module.exports = {
                         loader:'file-loader',
                         options: {
                             name:'[name]-[hash].[ext]',
-                            outputPath: '../static/images'
+                            outputPath: 'images/'
                         }
                     }
                 ]

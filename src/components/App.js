@@ -34,7 +34,8 @@ class App extends Component {
 
     render(){
      return <main>
-              {this.props.isConnected ? <ChatComponent/> : <LoadingScreen/>}
+              {/* {this.props.isConnected ? <ChatComponent/> : <LoadingScreen/>} */}
+              <LoadingScreen />
             </main>
     }
 }

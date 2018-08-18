@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../../styles/general/loading.styl'
+import loading_image from '../../assets/loading_image.png'
 
 const LoadingScreen = () => {
   return (
@@ -8,7 +9,7 @@ const LoadingScreen = () => {
         <div className="loading_container">
             <div className="pulsing-delayed"></div>
             <div className="pulsing"></div>
-            <img src="https://pbs.twimg.com/profile_images/470682672235151360/vI0ZZlhZ_400x400.png" 
+            <img src={ loading_image }
             alt="loading_animation"/>
         </div>
     </div>
